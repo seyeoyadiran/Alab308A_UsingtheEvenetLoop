@@ -53,6 +53,7 @@ const trampoline = function(fn) {
 //Create a recursive function that flattens an array of nested arrrays
 let nestedArr = [[1,2], [3,4], [5,6,7]];
 
-console.log(trampoline(recursedFlatten(nestedArr)));
+
 console.log(flatten(nestedArr));
 console.log(recursedFlatten(  nestedArr));
+console.log(trampoline(recursedFlatten(nestedArr)));

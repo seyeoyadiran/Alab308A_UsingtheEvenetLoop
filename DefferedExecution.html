@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="cachedText"></h1>
+
+</body>
+<script>
+
+    function allPrimeNUmbers( n ){
+        if( n < 2) {
+            return false;
+        }
+
+        const q = Math.floor(Math.sqrt(n));
+        for( let i = 2; i <= q; i++ ){
+            if(n % i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function outputPrimeNumbers(n){
+        let myString = document.getElementById('cachedText');
+
+        for( let i = 0; i < n ; i++){
+            if(allPrimeNUmbers(i)){
+                myString.innerHTML += i + " <br>";
+            }
+        }
+
+        setTimeout(() => {
+        alert(" The calculation is done ")
+    }, 1000);
+    }
+    
+    //Change the value of n here
+    outputPrimeNumbers(10000);
+    
+
+</script>
+</html>
